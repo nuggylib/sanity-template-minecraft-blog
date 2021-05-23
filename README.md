@@ -1,0 +1,1 @@
+# sanity-template-minecraft-blog
