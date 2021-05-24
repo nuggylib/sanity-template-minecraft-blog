@@ -80,10 +80,10 @@
   resolved "https://registry.yarnpkg.com/@rexxars/eventsource-polyfill/-/eventsource-polyfill-1.0.0.tgz#ab46f2f44da23aedd6f51f13d92a194a5367525b"
   integrity sha512-YnrybIoM9WFqmeK1D8p/gutqjJnmXCVFWAU3ucka9M7Dzpen3f2Dy4KsC6k1wDHrCtHQuUHHwZovh3i5UPDaZw==
 
-"@sanity/client@2.8.0":
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-2.8.0.tgz#43e35937e4de0f75c0b6bf029fca0e598c8a04ed"
-  integrity sha512-S/EYj4SOJ4OMOOULCjNE2moFsb4h2Vy9zV/v4dOappal+GBxafJ9E/J4+qLhkMZqd2hTfECfawjshuoUUo+L+g==
+"@sanity/client@2.10.5":
+  version "2.10.5"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-2.10.5.tgz#27ba884f63aa597d4e14a172da2e642a3cb86ff0"
+  integrity sha512-O5QncWt4YHLWfNCdyyE6oHOsDYVpI3vjh8dHG3WAtLYRF/YvPhjB6SxZPkHgBXOl5rfimb9qpGbvmzs/yY0KWg==
   dependencies:
     "@sanity/eventsource" "2.2.6"
     "@sanity/generate-help-url" "2.2.6"
@@ -125,11 +125,11 @@
   integrity sha512-NBDKGj14g9Z+bopIvZcQKWCzJq5JSrdmzRR1CS+iyA3Gm8SnIWBfZa7I3mTg2X6Nu8LQXG0EPKXdOGozLS4i3w==
 
 "@sanity/types@^2.10.0":
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/@sanity/types/-/types-2.10.0.tgz#9dc9be02907ffb94e1c64a23e2c19ef326272309"
-  integrity sha512-x4QpPD1yLttBx+aN4XNtfV/N4ioTEtTuZNaK05PMkiEoiXafjzFhokhWUhX71ONqFn99pKDhfvvuPQEvKZZfqw==
+  version "2.10.5"
+  resolved "https://registry.yarnpkg.com/@sanity/types/-/types-2.10.5.tgz#f03e431142a955ac9fd140a99eba5f64f444d18b"
+  integrity sha512-3Tv5sq8f7JQ616AB8WfaT0J2v014Az3U/85ZOzCN0t+ZY3Y4A5mj7fNDfri0A56iAIvyt9X2hCHTugRYe5PXsQ==
   dependencies:
-    "@sanity/client" "2.8.0"
+    "@sanity/client" "2.10.5"
     "@sanity/color" "^2.0.15"
     "@types/react" "^17.0.0"
     rxjs "^6.5.3"
@@ -2499,10 +2499,10 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-husky@^5.0.9:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-5.2.0.tgz#fc5e1c2300d34855d47de4753607d00943fc0802"
-  integrity sha512-AM8T/auHXRBxlrfPVLKP6jt49GCM2Zz47m8G3FOMsLmTv8Dj/fKVWE0Rh2d4Qrvmy131xEsdQnb3OXRib67PGg==
+husky@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-6.0.0.tgz#810f11869adf51604c32ea577edbc377d7f9319e"
+  integrity sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==
 
 iconv-lite@^0.4.24:
   version "0.4.24"
