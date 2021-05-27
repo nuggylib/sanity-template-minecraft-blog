@@ -1,0 +1,28 @@
+{
+  "repository": {
+    "name": "sanity-minecraft-blog",
+    "owner": "sanity-io",
+    "private": false
+  },
+  "sanity": {
+    "dataset": "blog",
+    "projectId": "jmhf2rn8",
+    "projectTitle": "Minecraft blog (dev)"
+  },
+  "user": {
+    "profileImage": "https://static.wikia.nocookie.net/characters/images/b/b3/SteveMinecraft.png/revision/latest?cb=20160127082617",
+    "displayName": "Minecraft Steve",
+    "email": "not_a_real_person@fakesite.com"
+  },
+  "userInput": {},
+  "deployments": {
+    "studio": {
+      "url": "https://sanity-minecraft-blog-studio-rf4qpk9y.netlify.com/",
+      "providerName": "netlify",
+      "providerInfo": {
+        "buildHookId": "5cc04d5199df1802277a6e91",
+        "siteId": "58275684-e35f-46ee-9fda-a5151927cfb5        "
+      }
+    }
+  }
+}
