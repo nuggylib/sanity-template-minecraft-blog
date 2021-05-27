@@ -9,8 +9,8 @@
     "dev": "sanity-template watch --template-values dev/template-values-development.json",
     "lint-commit": "prettier-eslint \"{src/**/*,test/**/*,packages/**/*}.{ts,tsx}\" --eslint-config-path=.eslintrc.yml --write",
     "lint-build": "npm run build && (cd build && npm install && npm run lint)",
-    "setup": "npm run build && cd build && npm install && npm run build",
-    "prepare": "node -e \"if(require('fs').existsSync('.git')){process.exit(1)}\" || husky install"
+    "prepare": "node -e \"if(require('fs').existsSync('.git')){process.exit(1)}\" || husky install",
+    "test": "npm run build && cd build && npm install && npm run build"
   },
   "devDependencies": {
     "@sanity/types": "^2.10.0",
