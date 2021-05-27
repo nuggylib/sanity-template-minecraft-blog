@@ -4,10 +4,11 @@ env:
   jest: true
   node: true
 extends:
-  # - eslint:recommended
-  # - plugin:@typescript-eslint/recommended
-  # - plugin:react/recommended
-  - prettier
+  - "eslint:recommended"
+  - "plugin:import/errors"
+  - "plugin:@typescript-eslint/eslint-recommended"
+  - "plugin:react/recommended"
+  - "plugin:prettier/recommended"
 globals:
   graphql: true
 parser: "@typescript-eslint/parser"
@@ -19,6 +20,7 @@ parserOptions:
   sourceType: module
 plugins:
   - "@typescript-eslint"
+  - prettier
   - react
 rules:
   arrow-body-style:
