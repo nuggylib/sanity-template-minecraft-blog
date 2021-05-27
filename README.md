@@ -1,25 +1,25 @@
 # sanity-template-minecraft-blog
 
+> This starter template is still early in development
+
+A starter template that currently contains a custom Sanity studio with a schema modeled after the base game data. The base data is not designed to work with a specific site generator, but rather _any_ site generator; the idea is that it should be flexible enough to hook up to _any_ site generator (with the appropriate setup, of course).
+
 ## Who this is for
 
-### Minecraft Modders
+### Minecraft modders and modpack maintainers
 
 Often times, Minecraft modders are budding developers who are trying to build up a portfolio. This template will help you moderate your site content via the Sanity studio. You can then hook it up to a static site generator so that you can demonstrate it however you'd like, whether it be by having a neatly-polished user-facing site, or a highly-technical dev-oriented site (such as one discussing the technical details of how you implemented your mod).
 
-## Getting started locally
+## Getting data
 
-To build the starter template locally:
-1. `cd` to the project root and run `yarn setup`
-    * This handles building and bootstrapping the studio
-    * Eventually, it will also handle building any front end(s) we package in this template
-3. Then, run `yarn test-studio`
-    * Fields that the user would set during `sanity init` will be unset
+This Studio is not intended to be manually-populated with data. While technically possible, it would be far too tedious to do that for every supported content type that a Minecraft Mod/Modpack may have.
 
-## References
-1. [Sanity starter templates](https://www.sanity.io/docs/starter-templates)
-    * We only really use this for referencing configurations
-    * One big difference is that we don't use the `.sanity-template` directory as the documentation states; our structure more-closely follows the `sanity-template-gatsby-blog` starter template
-2. [`sanity-template-gatsby-blog`](https://github.com/sanity-io/sanity-template-gatsby-blog/tree/main)
-3. [Sanity Projects API](https://www.sanity.io/docs/projects-api)
-4. [Sanity JavaScript client](https://www.sanity.io/docs/js-client)
-5. [`sanity init`](https://www.sanity.io/docs/init)
+### [Minecraft Asset Reader](https://github.com/nuggylib/minecraft-asset-reader)
+
+> This tool is currently unreleased and experimental; to test it out, you'll need to clone the repository, build it, then follow the local testing steps in the repository
+
+The Minecraft Asset Reader is a tool we've built to assist you in configuring your mod/modpack's data. It will help you:
+
+1. Create scaled-up image assets (including an emulated "isometric" icon for blocks)
+2. Remove the pain of having to manually-track down related definition files
+3. Export the data to your Sanity project
