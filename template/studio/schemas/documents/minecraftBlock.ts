@@ -1,16 +1,16 @@
-const HARVEST_TOOLS = [`Axe`, `Hoe`, `Pickaxe`, `Shovel`, `Hand`, `None`]
+const HARVEST_TOOLS = [`axe`, `hoe`, `pickaxe`, `shovel`, `hand`, `none`]
 
 const HARVEST_TOOL_MATERIALS = [
-  `Wood`,
-  `Stone`,
-  `Iron`,
-  `Diamond`,
-  `Netherite`,
-  `Gold`,
-  `None`,
+  `wood`,
+  `stone`,
+  `iron`,
+  `diamond`,
+  `netherite`,
+  `gold`,
+  `none`,
 ]
 
-const isValidToolInput = (harvestTools) => {
+const isValidToolInput = (harvestTools: string[]) => {
   if (!harvestTools) return `Harvest tools must be defined`
   const tests = harvestTools.map((tool) => HARVEST_TOOLS.includes(tool))
   if (tests.includes(false))
@@ -18,7 +18,7 @@ const isValidToolInput = (harvestTools) => {
   else return true
 }
 
-const isValidToolMaterialInput = (harvestToolMaterials) => {
+const isValidToolMaterialInput = (harvestToolMaterials: string[]) => {
   if (!harvestToolMaterials) return `Harvest tool materials must be defined`
   const tests = harvestToolMaterials.map((tool) =>
     HARVEST_TOOL_MATERIALS.includes(tool)
@@ -60,7 +60,10 @@ export default {
       type: `slug`,
       options: {
         source: `name`,
-        maxLength: 96,
+        slugify: (input: string) => input
+                         .toLowerCase()
+                         .replace(/\s+/g, '-')
+                         .slice(0, 200)
       },
     },
     {
@@ -91,7 +94,7 @@ export default {
       description:
         `How easily this block catches fire when fire is available to spread (0 for not at all, 60 for most-easily)`,
       // see https://minecraft.fandom.com/wiki/Fire
-      validation: (Rule) => Rule.required().integer().min(0).max(60),
+      validation: (Rule: any) => Rule.required().integer().min(0).max(60),
       initialValue: 0,
     },
     {
@@ -101,7 +104,7 @@ export default {
       description:
         `The higher the flammability value, the more-quickly this block burns away when on fire (though the exact burn time depends on difficulty, rain, age of the fire and a certain amount of randomness due to block ticks)`,
       // see https://minecraft.fandom.com/wiki/Fire
-      validation: (Rule) => Rule.required().integer().min(0).max(100),
+      validation: (Rule: any) => Rule.required().integer().min(0).max(100),
       initialValue: 0,
     },
     {
@@ -112,7 +115,7 @@ export default {
       description:
         `The amount of light this block emits, with 0 being none, 14 being the same amount as a torch, and 15 as the same as broad daylight`,
       // see https://minecraft.fandom.com/wiki/Light
-      validation: (Rule) => Rule.required().integer().min(0).max(15),
+      validation: (Rule: any) => Rule.required().integer().min(0).max(15),
     },
     {
       title: `Harvest Tool`,
@@ -120,8 +123,8 @@ export default {
       type: `array`,
       of: [{ type: `string` }],
       description: `The types of tools that can be used to harvest this block`,
-      validation: (Rule) =>
-        Rule.custom((harvestTools) => isValidToolInput(harvestTools)),
+      validation: (Rule: any) =>
+        Rule.custom((harvestTools: string[]) => isValidToolInput(harvestTools)),
       initialValue: HARVEST_TOOLS,
     },
     {
@@ -131,8 +134,8 @@ export default {
       of: [{ type: `string` }],
       description:
         `Tool material that can be used to harvest this block (e.g., diamond when a diamond tool is required)`,
-      validation: (Rule) =>
-        Rule.custom((harvestToolMaterials) =>
+      validation: (Rule: any) =>
+        Rule.custom((harvestToolMaterials: string[]) =>
           isValidToolMaterialInput(harvestToolMaterials)
         ),
       initialValue: HARVEST_TOOL_MATERIALS,
@@ -145,7 +148,7 @@ export default {
       description:
         `The LOWEST altitude level that this block can spawn (0 - 320)`,
       // see https://minecraft.fandom.com/wiki/Altitude
-      validation: (Rule) => Rule.integer().min(MIN_ALTITUDE).max(MAX_ALTITUDE),
+      validation: (Rule: any) => Rule.integer().min(MIN_ALTITUDE).max(MAX_ALTITUDE),
     },
     {
       title: `Maximum spawn level`,
@@ -155,7 +158,7 @@ export default {
       description:
         `The HIGHEST altitude level that this block can spawn (0 - 320)`,
       // see https://minecraft.fandom.com/wiki/Altitude
-      validation: (Rule) => Rule.integer().min(MIN_ALTITUDE).max(MAX_ALTITUDE),
+      validation: (Rule: any) => Rule.integer().min(MIN_ALTITUDE).max(MAX_ALTITUDE),
     },
     {
       title: `Related Blocks`,
