@@ -67,6 +67,11 @@ export default {
       },
     },
     {
+      name: `namespace`,
+      title: `Namespace`,
+      type: `string`,
+    },
+    {
       name: `image`,
       title: `Image`,
       type: `image`,
